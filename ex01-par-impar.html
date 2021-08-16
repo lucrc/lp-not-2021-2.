@@ -12,11 +12,14 @@
             ou ímpar e informe ao usuário usando alert().
         */
         // Entrada de dados
-        let num1 = Number(prompt('Informe um número:'))
+        //let num1 = Number(prompt('Informe um número:'))
+        //parseInt(): *Teta* converter uma string em um número INTEIRO
+        let num1 = parseInt(prompt('Informe um número:'))
+        
         // teste da entrada para saber se foi digitado um número
         if(isNaN(num1)){
-            //mensagem de alerta para entra invalida
-           alert('Erro: você não digitou um número:') 
+            //mensagem de alerta para entra invalida (numero não é inteiro)
+           alert('Erro: você não digitou um número inteiro:') 
         }
         else{
             //pbtendo o resto da divisão
