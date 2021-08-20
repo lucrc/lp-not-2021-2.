@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+<script>
+  
+    /*
+    Solicite ao usuário para informar dois números e um operador
+    matemático. Você usará três prompt(), um para cada número e
+    o terceiro para o operador.
+    Aceite os seguintes operadores:
+    + => adição
+    - => subtração
+    *, X ou x => multiplicação
+    / ou : => divisão
+    Efetue o cálculo apropriado de acordo com o operador informado
+    e informe o resultado usando document.write().
+    */
+   //Number () e paseFloat() tentam converter uma string e número
+    let num1 = Number(prompt('Informe o primeiro número:'))
+    let oper = prompt('Informe a operação desejada(+ - * X x / :):')
+    let num2 = parseFloat(prompt('Informe o segundo número:'))
+    
+        
+        // teste da entrada para saber se foi digitado um número
+        if(isNaN(num1)){
+            //mensagem de alerta para entra invalida 
+           alert('Erro: primeiro número inválido') 
+        }
+        /*else{
+                    
+            if(isNaN(num2)){
+                // mensagem ano invalido
+                alert('Erro: segundo número inválido') 
+            }
+            else if(oper === '+'){
+                let result = num1 + num2
+                document.write('A soma dos números ' +(num1)+ ' e ' +(num2)+ ' é: ' +(result))
+                //alert('A soma dos números ' +(num1)+ ' e ' +(num2)+ ' é: ' +(result))
+                //alert('teste')
+            }
+            else if(oper === '-'){
+                let result = num1 - num2
+                document.write('A subtração do número ' +(num2)+ ' de ' +(num1)+ ' é: ' +(result))
+            }
+            else if(oper === '/' || oper === ':'){
+                let result = num1 / num2
+                document.write('A divisão do número ' +(num1)+ ' por ' +(num2)+ ' é: ' +(result))
+            }
+            
+            else if(oper === 'x' || oper === 'X' || oper === '*' ){
+                let result = num1 * num2
+                document.write('A multiplicação do número ' +(num1)+ ' por' +(num2)+ ' é: ' +(result))
+            }
+            else{
+                document.write('Operação inválida')
+            }            
+        }
+        */
+       else{
+           switch(oper){
+                case '+':
+                   document.write(num1 + num2)
+                   break
+                
+                case '-':
+                    document.write(num1 - num2)
+                    break
+
+                case '*':   //case vazio
+                case 'X':   //case vazio
+                case 'x':   
+                    document.write (num1 * num2)
+                    break
+                
+                case "/":   // case vazio
+                case ':':
+                    document.write(num1 / num2)
+                    break
+
+                default: // "else do case"
+                    alert('ERRO: OPERADOR INVÁLIDO') 
+                    break   
+            }    
+       }
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
