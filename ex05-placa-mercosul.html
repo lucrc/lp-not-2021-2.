@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+    <script>
+        /*
+            Recentemente, as placas de automóveis no Brasil passaram a usar
+            o chamado "modelo Mercosul".
+            Nesse modelo, o segundo dígito numérico do modelo anterior passou
+            a ser representado por uma letra. A conversão é regida pela tabela:
+            Dígito         Letra
+               0              A
+               1              B
+               2              C
+               3              D
+               4              E
+               5              F
+               6              G
+               7              H
+               8              I
+               9              J
+            Assim, uma placa tradicional ABC-1234, no formato do padrão Mercosul,
+            ficaria ABC-1C34.
+            Peça para o usuário informar um dígito válido entre 0 a 9. Com o loop 
+            do..while, faça a validação, repetindo a solicitação até que a resposta
+            obtida seja válida.
+            
+            Em seguida, usando a estrutura de decisão switch..case, informe ao usuário 
+            a letra correspondente ao dígito informado.
+        */
+       let num
+       do {
+            ano = parseInt(prompt('Informe o segundo digito númerico da placa padrão antigo:'))
+        } while(isNaN(num) || num < 0 || num > 9)
+       
+            switch(oper){
+                case 0:
+                   document.write(`O digito ${num} será substituido pela letra "A"`)                   
+                   break
+                
+                case 1:
+                   document.write(`O digito ${num} será substituido pela letra "B"`)                   
+                   break
+
+                case 2:
+                   document.write(`O digito ${num} será substituido pela letra "C"`)                   
+                   break
+
+                case 3:
+                   document.write(`O digito ${num} será substituido pela letra "D"`)                   
+                   break
+                case 4:
+                   document.write(`O digito ${num} será substituido pela letra "E"`)                   
+                   break
+
+                case 5:
+                   document.write(`O digito ${num} será substituido pela letra "F"`)                   
+                   break
+
+                case 6:
+                   document.write(`O digito ${num} será substituido pela letra "G"`)                   
+                   break
+
+                case 7:
+                   document.write(`O digito ${num} será substituido pela letra "H"`)                   
+                   break
+
+                case 8:
+                   document.write(`O digito ${num} será substituido pela letra "I"`)                   
+                   break
+                case 9:
+                   document.write(`O digito ${num} será substituido pela letra "J"`)                   
+                   break
+                 
+            }    
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>
