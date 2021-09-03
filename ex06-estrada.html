@@ -18,8 +18,9 @@
             informe com document.write todos aqueles que têm um pedágio ou um posto
             de atendimento ao usuário da AUTOBURACON S/A.
         */
-        let kmRod, cont = 1
-        do{
+        let kmRod
+        kmRod = parseInt(prompt('Informe o comprimento da rodovia: '))
+        /*do{
             kmRod = parseInt(prompt('Informe o comprimento da rodovia: '))
         }while(isNaN(kmRod) || kmRod <= 200)
 
@@ -33,7 +34,15 @@
             }
             cont++
         }
-        
+        */
+        for(let km = 1; km <= kmRod; km++){
+            if(km % 23 === 0){
+                document.write(`O km ${km} tem posto de atendimento ao usuário<br>`)               
+            }
+            if(km % 31 === 0){
+                document.write(`O km ${km} tem pedágio<br>`)                 
+            }
+        }
     </script>
 </head>
 <body>
