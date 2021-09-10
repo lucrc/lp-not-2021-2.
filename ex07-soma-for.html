@@ -14,19 +14,23 @@
             os dois valores informados (inclusive). Por exemplo, se os números
             informados forem 20 e 25, você somará 20 + 21 + 22 + 23 + 24 + 25.
         */
-        let num1, num2
+        let num1, num2, soma = 0, menor, maior
         do {
             num1 = parseInt(prompt('Informe um número inteiro'))
         } while(isNaN(num1))
         do {
             num2 = parseInt(prompt('Informe um número inteiro diferente'))
         } while(isNaN(num2) || num2 === num1)
-        let menor = num1, maior = num2
+        
         if(num2 < num1){
             menor = num2
             maior = num1
+        }      
+        else{
+            menor = num1
+            maior = num2          
         }
-        let soma = 0
+        soma = 0
         for(i = menor; i <= maior; i++){
             soma += i
         }
