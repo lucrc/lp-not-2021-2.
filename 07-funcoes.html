@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+    <script>
+
+
+        //Calculando o fatorial de 8
+        let num = 5        
+        let fatorial = 1
+        for(i = num; i >= 1; i--){
+            fatorial *= i
+        }    
+        document.write(`O fatorial é: ${fatorial}.<br>`) 
+
+        /******************************************************************************
+         
+            calculando o fatorial de 8 
+
+        */
+        
+        num = 8        
+        fatorial = 1
+        for(i = num; i >= 1; i--){
+            fatorial *= i
+        }    
+        document.write(`O fatorial é: ${fatorial}.<br>`) 
+        /******************************************************************************
+            Principio DRY = Don't repeat yourself(não se repita) 
+
+        */
+        // Declaração de Função
+        // calcFatorial -> nome da função
+        // num -> parâmetro ou argumento (dado de entrada)
+        function calcFatorial(num){
+            let resultado = 1
+            for(let i = num; i > 1; i--){
+                resultado *= i
+            }
+            return resultado // dado de saida
+        }
+        // CHAMADA À FUNÇÃO
+        // A variável fat4 receberá o resultado da função,
+        // enviado pelo return
+        let fat4 = calcFatorial(4)
+
+        document.write(`4! é igual a ${fat4}.<br>`)
+
+        // CHAMADA À FUNÇ~ÇAO sem atribuição a variável
+        document.write(`6! é igual a ${calcFatorial(6)}.<br>`)
+
+        // Chamada a uma função da biblioteca Math do JS
+        document.write(`A raiz quadrada de 3 é ${Math.sqrt(3)}.<br>`)
+
+        let int
+        do {
+            int = parseInt(prompt('Informe um número inteiro e maior que 1'))
+        } while((isNaN(int)) || int <=  1 )
+        document.write(`${int}! é igual a ${calcFatorial(int)}.<br>`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
