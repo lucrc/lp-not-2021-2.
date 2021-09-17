@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exdercicio 10</title>
+    <script>
+        /*
+            Escreva uma função que receba dois números e retorne o maior entre eles.
+            Retorne undefined caso os números sejam iguais entre si.
+        */
+        /*
+        let num1, num2, maior
+        do {
+            num1 = parseInt(prompt('Informe oprimeiro número: '))
+        } while(isNaN(num1))
+        do {
+            num2 = parseInt(prompt('Informe o segundo número:'))
+        } while(isNaN(num2))
+               
+        if(num1 > num2){
+            maior = num1
+        }
+        else if(num2 > num1){
+            maior = num2
+        }
+        document.write(`O maior número é: ${maior}`)
+        */
+        function maior(num1, num2){
+            let resultado 
+            if(num1 > num2){
+                resultado = num1
+            }
+            else if(num2 > num1){
+                resultado = num2
+            }
+            else{   //números iguais
+                resultado = undefined                
+            }
+            return resultado // dado de saida
+        }
+        document.write(`O maior número entre 8 e 11 é ${maior(8, 11)}.<br>`)
+        document.write(`O maior número entre 6 e 2 é ${maior(6, 2)}.<br>`)
+        document.write(`O maior número entre 7 e 7 é ${maior(7, 7)}.<br>`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

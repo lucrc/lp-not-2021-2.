@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções 3</title>
+    <script>
+    /*
+        FUNÇÕES SEM RETORNO
+        São funções que desempenham uma tarefa, mas não retornam
+        um valor como resultado
+    */
+
+    //Declaração da função
+    function desenharTraco(tamanho){
+        for(let i = 1; i<= tamanho; i++){
+            document.write('-')
+        }
+        document.write('<br>')  
+    }
+    desenharTraco(50)
+    desenharTraco(20)
+    desenharTraco(100)
+
+    /*
+        FUNÇÃO SEM PARÂMETRO
+        Uma função pode não precisar de informações externas para fazer 
+        o seu trabalh. Nesse caso, o parênteses qe seguem o nome da 
+        função permanecem, tanto na declaração quanto na chamada da função.
+    */
+
+    function agora(){ // Retorna a hora atual do computador
+        let hoje = new Date()
+        return hoje.getHours() + ':' + hoje.getMinutes() + ':' + 
+            hoje.getSeconds()
+    }
+    document.write(`Hora atual: ${agora()}<br>`)
+
+    //Função sem parâmetro e sem retorno
+    function saudacao(){
+        let hoje = new Date()
+        let hora = hoje.getHours()
+
+        if(hora < 12){
+            document.write(`Bom dia!<br>`)
+        }
+        else if(hora < 18){
+            document.write('Boa tarde!<br>')
+        }
+        else{
+            document.write('Boa noite!<br>')
+        }        
+    }
+    saudacao()
+    /*
+        FUNÇÃO COM PARÂMETRO OPCIONAL()
+        O(s)
+
+    */
+    function calcArea(base, altura, tipo='R') {
+        let area
+        switch(tipo) {
+            case 'R':       // Retângulo
+                area = base * altura
+                break
+            case 'T':       // Triângulo
+                area = base * altura / 2
+                break
+            case 'E':       // Elipse
+                area = (base / 2) * (altura / 2) * Math.PI
+                break
+            default:        // Forma não reconhecida
+                area = null
+        }
+        return area
+    }
+    // Chamadas à função
+    document.write(`Retângulo de 10x15: ${calcArea(10, 12)}<br>`)
+    document.write(`triangulo de 7x25: ${calcArea(7, 25, 'T')}<br>`)
+    document.write(`Retângulo de 4.5x4.5: ${calcArea(4.5, 4.5)}<br>`)
+    document.write(`Retângulo de 19x12.5: ${calcArea(19, 12.5)}<br>`)
+    document.write(`Elipse de 8x8: ${calcArea(8,8, 'E')}<br>`)
+
+    </script>   
+</head>
+<body>
+    
+</body>
+</html>
