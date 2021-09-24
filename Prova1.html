@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova1</title>
+    <script>
+        //Lucas Rosa Cassiano Linguagem de Programação  Fatec-Franca      2° ADS noturno
+        // Definição de variaveis
+        let dia, mes, casa, numCasa
+        // Entrada condicionao de dados
+        do { // faça
+            dia = parseInt(prompt('Informe o dia de seu nascimento:')) // captura de dado "dia" convertendo
+            //para numero inteiro 
+        } while(isNaN(dia) || dia < 1 || dia > 31) // até que seja um numero entre 1 e 31
+        do{// faça
+            mes = parseInt(prompt('Informe  o mês de se nascimento:'))// captura de dado "dia" convertendo
+            //para numero inteiro 
+        } while(isNaN(mes) || mes < 1 || mes > 12)// até que seja um numero entre 1 e 12
+        do{
+            ano = parseInt(prompt('Informe seu o ano de seu nascimento:'))
+        } while(isNaN(ano) || ano < 1921 || ano > 2021)// até que seja um numero entre 1921 e 2021
+        
+        //Declaração de função com 3 parâmetros
+        function codigoCasa(dia, mes, ano) {
+            let digito // declaração de variavel dentro da função
+            digito = ((ano + mes)*dia) % 4 // calculo para obtenção do digito que defina a casa destino
+        
+        return digito
+        }
+        numCasa  = codigoCasa(dia,mes,ano) // chamada da função com parâmetros obtidos pela entrada de dados
+        // Comparação do digito obtido pelo processamento com a base de dados que definem a casa de destino
+        switch(numCasa) {
+            case 0:       // Casa Gado Demais
+                casa = "Casa Gado Demais"
+                break
+            case 1:       // casa Galo de Rinha
+                casa = "Casa Galo de Rinha"
+                break
+            case 2:      // casa Lacraste 
+                casa = "Casa Lacraste"
+                break
+            default:        // casa smilingüido
+                casa = "Casa Smlingüido"
+        }
+        // demonstração do resultado ao usuário
+        document.write(`Seu destino será a ${casa}`)
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
