@@ -68,8 +68,8 @@
         <!-- Inputs do tipo radio precisam ter o mesmo nome
         para funcionar como um único conjunto no qual
         apenas uma opção possa estar marcada ao mesmo tempo -->
-        <input id="maculino" type="radio"name ="sexo"checked>
-        <label for="maculino">Masculino</label>
+        <input id="masculino" type="radio"name ="sexo"checked>
+        <label for="masculino">Masculino</label>
         <br>
         <input id="feminino" type="radio" name = "sexo">
         <label for="feminino">Feminino</label>
@@ -113,7 +113,7 @@
         const primeiroNome = document.querySelector('#primeiro-nome')
         const sobrenome = document.querySelector('#sobrenome')
         const formaTrat = document.querySelector('#forma-trat')
-        const maculino = document.querySelector('#masculino')
+        const masculino = document.querySelector('#masculino')
         const feminino = document.querySelector('#feminino')
         
         const horaDia = document.getElementById('hora-dia') 
@@ -185,18 +185,18 @@
                         break
                     case 2:
                         if(masculino.checked){
-                            textoSaudacao += 'Excelentíssimo'
+                            textoSaudacao += 'Excelentíssimo '
                         }
                         else{
-                            textoSaudacao += 'Excelentíssima'
+                            textoSaudacao += 'Excelentíssima '
                         }
                         break
                     case 3:
                         if(masculino.checked){
-                            textoSaudacao += 'Ilustríssimo'
+                            textoSaudacao += 'Ilustríssimo '
                         }
                         else{
-                            textoSaudacao += 'Ilustríssima'
+                            textoSaudacao += 'Ilustríssima '
                         }
                         break
                     case 4:
@@ -204,18 +204,18 @@
                         break    
                     case 5:
                         if(masculino.checked){
-                            textoSaudacao += 'Senhor'
+                            textoSaudacao += 'Senhor '
                         }
                         else{
-                            textoSaudacao += 'Senhora'
+                            textoSaudacao += 'Senhora '
                         }
                         break  
-                    default:  // case 6:
+                    case 6:
                         if(masculino.checked){
-                            textoSaudacao += 'Cremosíssimo'
+                            textoSaudacao += 'Cremosíssimo '
                         }
                         else{
-                            textoSaudacao += 'Cremosíssima'
+                            textoSaudacao += 'Cremosíssima '
                         }                        
 
                 }
