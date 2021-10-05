@@ -116,7 +116,7 @@
         const maculino = document.querySelector('#masculino')
         const feminino = document.querySelector('#feminino')
         
-        const horaDia = document.getElementsById('hora-dia') 
+        const horaDia = document.getElementById('hora-dia') 
         const exibirAlert = document.getElementById('exibir-alert')
         const exibirDocumento = document.getElementById('exibir-documento')
         const saudacao = document.getElementById('saudacao')
@@ -146,13 +146,13 @@
             }
             //hora dia
             let valHoraDia = parseInt(horaDia.value)
-            if(isNaN(valHoraDia.value)|| valHoraDia < 0 || valHoraDia > 23){
+            if(isNaN(valHoraDia) || valHoraDia < 0 || valHoraDia > 23){
                 alert('A hora do dia deve ser um valor entre 0 e 23.')
                 horaDia.focus()
                 return false
             }
             // Opções de exibição
-            if((! exibirAlert.checked) && (exibirDocumento.checked)){
+            if((! exibirAlert.checked) && (! exibirDocumento.checked)){
                 alert('Pelo menos uma das opções de exibição deve estar marcada.')
                 exibirAlert.focus()
                 return false
