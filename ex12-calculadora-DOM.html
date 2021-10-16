@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora DOM</title>
+</head>
+<body>
+    <h1>Calculadora DOM</h1>
+
+    <div>
+        <label for="num1">Primeiro número</label>
+        <input id="num1" type="number">
+    </div>
+
+    <div>
+        <label for="oper">Operação</label>
+        <select id="oper">
+            <option>(Selecione)</option>
+            <option>Soma (+)</option>
+            <option>Subtração (-)</option>
+            <option>Multiplicação (*)</option>
+            <option>Divisão (/)</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="num2">Segundo número</label>
+        <input id="num2" type="number">
+    </div>
+
+    <div>
+        <button id="calcular">Calcular</button>
+    </div>
+
+    <div id="resultado">
+
+    </div>
+    <script>
+        // capturando as entradas/saidas de dados em constantes do JS
+        const num1 = document.querySelector("#num1")
+        const num2 = document.querySelector("#num2")
+        const oper = document.querySelector("#oper")
+        const result = document.querySelector('#resultado')
+        const calc = document.querySelector('#calcular')
+        
+        
+        function validar(){   // função de validação das entradas de dados    
+            if(num1.value === ''){ // verificando se o primeiro elemento foi inserido
+                alert('O primeiro numero precisa ser preenchido.') // mensagem de alerta para dado não inserido
+                num1.focus() // selecionando campo de entrada de dado não preenchida
+                return false // retorno para entrada de dado em caso de erro
+            }    
+            if (oper.selectedIndex <= 0){ //  verificando se a operação foi selecionada
+                alert('A operação precisa ser selecionada.')// mensagem de alerta operação não selecionada
+                oper.focus() // selecionando campo de entrada da operação não selecionada corretamente
+                return false// retorno para entrada da opração em caso de erro
+            }
+            let n2 = parseFloat(num2.value) // variavel para valor da entrada do segundo numero convertido para numero real
+            if(isNaN(n2)){// verificando se o segundo elemento foi inserido
+                alert('O segundo numero precisa ser preenchido.')// mensagem de alerta para dado não inserido
+                num2.focus()// selecionando campo de entrada de dado não preenchida
+                return false // retorno para entrada de dado em caso de erro
+            }
+            if(oper.selectedIndex === 4 && n2 === 0 ){//  verificando se a operação de divisão foi selecionada em conjunto com o segundo numero 0
+                alert('Para a divisão, o segundo numero precisa ser diferente de "0".')// mensagem de alerta para valor do dividendo igual a zero
+                num2.focus() // selecionando campo de entrada de dado preenchidacom numero 0
+                return false // retorno para entrada de dado em caso de erro
+            }return true       
+        }        
+        function calculando(){ // função de execução do calculo
+            if (validar()){  // chamada a função de validação             
+                let n1 = parseFloat(num1.value) // variavel para valor da entrada do primeiro numero convertido para numero real
+                let n3 = parseFloat(num2.value) // variavel para valor da entrada do segundo numero convertido para numero real
+                let calculo // variavel de resultado do calculo
+                switch(oper.selectedIndex){ // verficando qual operação foi selecionada para o calculo
+                    
+                    case 1: // soma
+                        calculo = n1 + n3                                          
+                        break
+                    case 2: // subtração
+                        calculo = n1 - n3
+                        break
+                    case 3: // multiplicação        
+                        calculo = n1 * n3
+                        break
+                    case 4: // divisão                   
+                        calculo = n1 / n3
+                        
+                } 
+                if(calculo !== undefined){ // verificando se o calculo foi realizado
+                    result.textContent = (`Resultado é : ${calculo}`) // mostrando o resultado do calculo na div resultado
+                }      
+                      
+            }            
+            
+        }
+        
+        calc.addEventListener('click', calculando) // chamada a função de calculando
+        
+    </script>
+
+</body>
+</html>
