@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+</head>
+<body>
+    <h1>Estados do Sudeste e do Sul do Brasil</h1>
+    <ul>
+
+    </ul>
+    <script>
+                
+        /*
+            1) Crie um vetor vazio.
+        */
+
+        let estados = []
+
+        /*    2) Usando o método de inserção NO INÍCIO do vetor, coloque os seguintes Estados
+               no vetor:
+               São Paulo
+               Santa Catarina
+               Rio Grande do Sul
+               Rio de Janeiro
+               Paraná
+               Minas Gerais
+               Espírito Santo
+        */
+
+        estados.unshift('São Paulo')
+        estados.unshift('Santa Catarina')
+        estados.unshift('Rio Grande do Sul')
+        estados.unshift('Rio de Janeiro')
+        estados.unshift('Paraná')
+        estados.unshift('Minas Gerais')
+        estados.unshift('Espírito Santo')
+
+
+        /*    3) Percorra o vetor com um loop for..of, crie um item de lista para cada um dos 
+        elementos do vetor e insira-o na lista não ordenada.
+
+        */
+        
+
+        
+        for(let estado of estados) {
+            
+            document.write(estado + "<br>")           
+            
+        }
+        document.write('<hr>')
+
+        const lista = document.querySelector('ul')  
+        
+        document.body.appendChild(lista) 
+        
+        const itemEs = document.createElement('li')
+
+        itemEs.id = 'es'
+        itemEs.textContent = 'Espírito Santo'
+        
+        lista.appendChild(itemEs)
+
+        const itemMg = document.createElement('li')
+
+        itemMg.id = 'mg'
+        itemMg.textContent = 'Minas Gerais'
+        
+        lista.appendChild(itemMg)
+
+        const itemPr = document.createElement('li')
+
+        itemPr.id = 'pr'
+        itemPr.textContent = 'Paraná'
+        
+        lista.appendChild(itemPr)
+
+        const itemRj = document.createElement('li')
+
+        itemRj.id = 'rj'
+        itemRj.textContent = 'Rio de Janeiro'
+        
+        lista.appendChild(itemRj)
+
+        const itemRs = document.createElement('li')
+
+        itemRs.id = 'rs'
+        itemRs.textContent = 'Rio Grande do Sul'
+        
+        lista.appendChild(itemRs)
+
+        const itemSc = document.createElement('li')
+
+        itemSc.id = 'sc'
+        itemSc.textContent = 'Santa Catarina'
+        
+        lista.appendChild(itemSc)
+
+        const itemSp = document.createElement('li')
+
+        itemSp.id = 'sp'
+        itemSp.textContent = 'São Paulo'
+        
+        lista.appendChild(itemSp)
+    </script>
+</body>
+</html>
