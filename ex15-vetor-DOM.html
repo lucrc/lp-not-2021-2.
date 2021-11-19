@@ -42,68 +42,74 @@
         elementos do vetor e insira-o na lista não ordenada.
 
         */
-        
+        const lista = document.querySelector('ul')
+        for(let estado of estados){
+            const item = document.createElement('li')
+            item.textContent = estado
+            lista.appendChild(item)
 
-        
-        for(let estado of estados) {
-            
-            document.write(estado + "<br>")           
-            
         }
-        document.write('<hr>')
 
-        const lista = document.querySelector('ul')  
         
-        document.body.appendChild(lista) 
+        // for(let estado of estados) {
+            
+        //     document.write(estado + "<br>")           
+            
+        // }
+        // document.write('<hr>')
+
+        // const lista = document.querySelector('ul')  
         
-        const itemEs = document.createElement('li')
-
-        itemEs.id = 'es'
-        itemEs.textContent = 'Espírito Santo'
+        // document.body.appendChild(lista) 
         
-        lista.appendChild(itemEs)
+        // const itemEs = document.createElement('li')
 
-        const itemMg = document.createElement('li')
-
-        itemMg.id = 'mg'
-        itemMg.textContent = 'Minas Gerais'
+        // itemEs.id = 'es'
+        // itemEs.textContent = 'Espírito Santo'
         
-        lista.appendChild(itemMg)
+        // lista.appendChild(itemEs)
 
-        const itemPr = document.createElement('li')
+        // const itemMg = document.createElement('li')
 
-        itemPr.id = 'pr'
-        itemPr.textContent = 'Paraná'
+        // itemMg.id = 'mg'
+        // itemMg.textContent = 'Minas Gerais'
         
-        lista.appendChild(itemPr)
+        // lista.appendChild(itemMg)
 
-        const itemRj = document.createElement('li')
+        // const itemPr = document.createElement('li')
 
-        itemRj.id = 'rj'
-        itemRj.textContent = 'Rio de Janeiro'
+        // itemPr.id = 'pr'
+        // itemPr.textContent = 'Paraná'
         
-        lista.appendChild(itemRj)
+        // lista.appendChild(itemPr)
 
-        const itemRs = document.createElement('li')
+        // const itemRj = document.createElement('li')
 
-        itemRs.id = 'rs'
-        itemRs.textContent = 'Rio Grande do Sul'
+        // itemRj.id = 'rj'
+        // itemRj.textContent = 'Rio de Janeiro'
         
-        lista.appendChild(itemRs)
+        // lista.appendChild(itemRj)
 
-        const itemSc = document.createElement('li')
+        // const itemRs = document.createElement('li')
 
-        itemSc.id = 'sc'
-        itemSc.textContent = 'Santa Catarina'
+        // itemRs.id = 'rs'
+        // itemRs.textContent = 'Rio Grande do Sul'
         
-        lista.appendChild(itemSc)
+        // lista.appendChild(itemRs)
 
-        const itemSp = document.createElement('li')
+        // const itemSc = document.createElement('li')
 
-        itemSp.id = 'sp'
-        itemSp.textContent = 'São Paulo'
+        // itemSc.id = 'sc'
+        // itemSc.textContent = 'Santa Catarina'
         
-        lista.appendChild(itemSp)
+        // lista.appendChild(itemSc)
+
+        // const itemSp = document.createElement('li')
+
+        // itemSp.id = 'sp'
+        // itemSp.textContent = 'São Paulo'
+        
+        // lista.appendChild(itemSp)
     </script>
 </body>
 </html>
