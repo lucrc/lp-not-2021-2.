@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 16</title>
+    <script>
+        /*
+            1) Declare um objeto pet1 que represente um cão e preencha as
+            seguintes propriedades:
+            - nome
+            - raça
+            - cor
+            - sexo
+            - nome do pai (nome da propriedade com espaços)
+            - nome da mãe (nome da propriedade com espaços)
+        */     
+        
+        let pet1 = {} 
+        pet1.nome = 'Thor'
+        pet1['raça'] = 'Vira lata'
+        pet1.cor = 'manchado'
+        pet1.sexo = 'macho'
+        pet1['nome do pai'] = 'Odin'
+        pet1['nome da mãe'] = 'Frigga'
+
+
+        /*    2) Crie um objeto pet2, copiando do primeiro:
+            let pet2 = pet1
+            E troque algumas das características de pet2
+        */
+        // A simples atribuição NÃO GERA uma nova cópia do objeto,
+        //apenas uma nova referência á mesma região de memória
+        // let pet2 = pet1 
+        
+        // Para efetivamente copiar um objeto, devemos "desmontá-lo"
+        //e depois "remontá-lo" em outra parte da memória. Isso pode 
+        // ser feito com a SINTAXE DE ESPELHAMENTO (SPREADING).
+        let pet2 = {...pet1}
+        
+        pet2.nome = 'Hella'   
+        pet2.sexo = 'fêmea'
+        
+
+        /*    3) Use dois for..in para listar os objetos: pet1 e pet2
+            
+        */
+        document.write('Pet 1<br>')
+        for(let atributo in pet1) {
+            document.write(`${atributo} => ${pet1[atributo]}<br>`)
+        }
+        document.write('<hr>')
+        for(let atributo2 in pet2) {
+            document.write(`${atributo2} => ${pet2[atributo2]}<br>`)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
